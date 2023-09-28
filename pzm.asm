@@ -3,10 +3,10 @@
 .notice "Standard"
 
 ; Options
+.include "Options\Labels.asm"
 .include "Options\Tweaks.asm"
 .include "Options\Settings.asm"
 .include "Options\GFX.asm"
-.include "Options\Labels.asm"
 
 ; ASM
 .include "ASM\breakBlocks.asm"
