@@ -4,6 +4,6 @@
 *.zip
 *.7z
 *.ss*
-LevelData\*
+LevelData\*.*
 zmht.asm
 A_README.txt
