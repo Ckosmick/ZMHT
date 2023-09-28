@@ -83,11 +83,11 @@ unkItemsasm:
 	
 ; replace status screen unknown item gfx
 .org 0x8400E08
-	.incbin "ASM\GFX\status.lz"
+	.incbin "GFX\status.lz"
 .org 0x8409d70
-	.incbin "ASM\GFX\items.lz"
+	.incbin "GFX\items.lz"
 .org 0x83FEFB8
-	.incbin "ASM\GFX\icons.lz"
+	.incbin "GFX\icons.lz"
 ;
 
 ;-------
@@ -96,25 +96,25 @@ unkItemsasm:
 ;
 ; replace chozo statue gfx
 .org 0x82C15F0
-	.import "ASM\GFX\gravity.lz"
+	.import "GFX\gravity.lz"
 .org 0x82BF534
-	.import "ASM\GFX\space.lz"
+	.import "GFX\space.lz"
 .org 0x82C2BC4
-	.import "ASM\GFX\plasma.lz"
+	.import "GFX\plasma.lz"
 	
 ; replace chozo statue pal
 .org 0x82C40F4
-	.import "ASM\GFX\plasma_item.palette"
+	.import "GFX\plasma_item.palette"
 .org 0x82C4114
-	.import "ASM\GFX\plasma_chozo.palette"
+	.import "GFX\plasma_chozo.palette"
 .org 0x82C0A58
-	.import "ASM\GFX\space_item.palette"
+	.import "GFX\space_item.palette"
 .org 0x82C0A78
-	.import "ASM\GFX\space_chozo.palette"
+	.import "GFX\space_chozo.palette"
 .org 0x82C2B24
-	.import "ASM\GFX\gravity_item.palette"
+	.import "GFX\gravity_item.palette"
 .org 0x82C2B44
-	.import "ASM\GFX\gravity_chozo.palette"
+	.import "GFX\gravity_chozo.palette"
 	
 ; change secondary sprites
 .org 0x801528A

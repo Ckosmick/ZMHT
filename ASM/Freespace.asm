@@ -79,7 +79,10 @@ DrawPickupWrapper:
 ; ------------------
 
 .org endOFROM ; End of ROM. Adjust as needed for your hacks.
-
+.ifdef fastSaveasm
+ .include "ASM\FreespaceASM\F_fastSave.asm"
+ .notice "fastSave"
+.endif
 .ifdef smControlsasm
  .include "ASM\FreespaceASM\F_SMControls.asm"
  .notice "smControls"
