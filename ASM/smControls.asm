@@ -1,13 +1,5 @@
 ﻿smControlsasm:
 
-; GFX for SM controls
-.org 0x845a600
-	.import "ASM\GFX\controlsText.lz"
-.org 0x845c0f4
-	.import "ASM\GFX\fileSelectSNES.lz"
-.org 0x8458e14
-	.import "ASM\GFX\fileSelectSNES2.lz"
-
 ;///////////////
 ;overwrite sound
 .org	0x0807822c

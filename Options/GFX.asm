@@ -1,3 +1,11 @@
+; GFX for SM controls
+.org 0x845a600
+	.import "GFX\controlsText.lz"
+.org 0x845c0f4
+	.import "GFX\fileSelectSNES.lz"
+.org 0x8458e14
+	.import "GFX\fileSelectSNES2.lz"
+
 ; This replaces the flashing hatch graphics for the mothership, for when red hatches take more than one missile to open.
 .org 0x85DA40C
 	.import "GFX\mothership.gfx"
