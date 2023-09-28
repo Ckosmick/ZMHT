@@ -27,7 +27,7 @@ cmp r0,7Eh
 	nop	
 .org 0x80075BE ;slightly rewrites original function to have a hijack
 	ldr		r2,=BetterPhysic + 1
-	bl		WrapperR2
+	bl		BXR2
 	cmp		r1,0h
 	beq		@@Return
 	mov		r1,r2     

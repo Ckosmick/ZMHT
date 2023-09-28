@@ -33,8 +33,8 @@
 .org 0x800EFD8
 	mov r0,8Eh ; change sfx from ballspark to shinespark
 
-.org 0x80597B4 ; Reveal blocks with missiles and super missiles. (as well as the usual bombs and power bombs)
-	.byte 0x03, 0xD0, 0x09, 0x29, 0x01, 0xD0, 0x0A, 0x29
+;.org 0x80597B4 ; Reveal blocks with missiles and super missiles. (as well as the usual bombs and power bombs)
+;	.byte 0x03, 0xD0, 0x09, 0x29, 0x01, 0xD0, 0x0A, 0x29
 
 .org 0x8055156 ; Charge particle visible when spinjumping
 	mov r0,r0
@@ -51,7 +51,7 @@
 ; Back out of status screen by pressing START (raygun)
 .org 0x8071830
 	.byte 0Ah
-
+/*  */
 ; Back out of sleep screen by pressing START (raygun)
 .org 0x8072064
 	.byte 0Ah
@@ -64,10 +64,6 @@
 .org 0x801B9E8
 	mov r0,r1
 	nop
-
-; Skips saving AI of Chozodian save stations, turning them into just refill stations
-.org 0x804742E
-   bl 804699Ch
 
 ; Shift down Ridley 2x2 map icon by 2 tiles (somerando)
 .org 0x840D212
@@ -88,79 +84,6 @@
 .byte 2 ; Frame 1. Default 2h
 .org 0x829F9A4
 .byte 0 ; Frame 1. Default 2h
-
-; ; Run animation frame timers
-; .org 0x8248300 ; : 02 -> ??
-; .byte 2
-; .org 0x8248310 ; : 02 -> ??
-; .byte 2
-; .org 0x8248320 ; : 02 -> ??
-; .byte 2
-; .org 0x8248330 ; : 02 -> ??
-; .byte 2
-; .org 0x8248340 ; : 02 -> ??
-; .byte 2
-; .org 0x8248350 ; : 02 -> ??
-; .byte 2
-; .org 0x8248360 ; : 02 -> ??
-; .byte 2
-; .org 0x8248370 ; : 02 -> ??
-; .byte 2
-; .org 0x8248380 ; : 02 -> ??
-; .byte 2
-; .org 0x8248390 ; : 02 -> ??
-; .byte 2
-; ; Spin animation frame timers (power suit)
-; .org 0x824FE64 ; : 02 -> ??
-; .byte 2
-; .org 0x824FE74 ; : 01 -> ??
-; .byte 1
-; .org 0x824FE84 ; : 02 -> ??
-; .byte 2
-; .org 0x824FE94 ; : 01 -> ??
-; .byte 1
-; .org 0x824FEA4 ; : 02 -> ??
-; .byte 2
-; .org 0x824FEB4 ; : 01 -> ??
-; .byte 1
-; .org 0x824FEC4 ; : 02 -> ??
-; .byte 2
-; .org 0x824FED4 ; : 01 -> ??
-; .byte 1
-; ; Spin animation frame timers (zero suit)
-; .org 0x829F8B4 ; : 02 -> ??
-; .byte 2
-; .org 0x829F8C4 ; : 01 -> ??
-; .byte 1
-; .org 0x829F8D4 ; : 02 -> ??
-; .byte 2
-; .org 0x829F8E4 ; : 01 -> ??
-; .byte 1
-; .org 0x829F8F4 ; : 02 -> ??
-; .byte 2
-; .org 0x829F904 ; : 01 -> ??
-; .byte 1
-; .org 0x829F914 ; : 02 -> ??
-; .byte 2
-; .org 0x829F924 ; : 01 -> ??
-; .byte 1
-; ; Ball animation frame timers
-; .org 0x8255A40 ; : 03 -> ??
-; .byte 3
-; .org 0x8255A50 ; : 03 -> ??
-; .byte 3
-; .org 0x8255A60 ; : 03 -> ??
-; .byte 3
-; .org 0x8255A70 ; : 03 -> ??
-; .byte 3
-; .org 0x8255A80 ; : 03 -> ??
-; .byte 3
-; .org 0x8255A90 ; : 03 -> ??
-; .byte 3
-; .org 0x8255AA0 ; : 03 -> ??
-; .byte 3
-; .org 0x8255AB0 ; : 03 -> ??
-; .byte 3
 
 ; Press B to skip elevator/boss intro cutscenes. 	(somerando/yohann)
 .org 0x806136C
@@ -201,9 +124,9 @@
 
 ; faster spark impacts
 .org 0x8009DE0 ; pose 23 = shinespark
-	cmp r0,8h ;check if animation counter = 8 frames (default 10)
+	cmp r0,8h ;check if animation counter = 8 frames
 .org 0x8009F3C ; pose 27 = ballspark
-	cmp r0,8h ;check if animation counter = 8 frames (default 10)
+	cmp r0,8h ;check if animation counter = 8 frames
 
 
 ; Shinespark in 2 block tall passages	(kiliwily)
@@ -223,15 +146,16 @@
 	mov r0,0BFh
 	
 ; Screw attack breaks bomb chain blocks (kiliwily)
-.org 0x8345ACC
-	asr r2,r2,2h
-	asr r2,r2,2h
-	asr r2,r2,2h
-	asr r2,r2,2h
-	asr r2,r2,2h
-	asr r2,r2,2h
-	asr r2,r2,2h
-	asr r2,r2,2h
+;.org 0x8345ACC
+;	.byte 0x92,0x10
+;	.byte 0x92,0x10
+;	.byte 0x92,0x10
+;	.byte 0x92,0x10
+;	.byte 0x92,0x10
+;	.byte 0x92,0x10
+;	.byte 0x92,0x10
+;	.byte 0x92,0x10
+;	.byte 0x92,0x10
 
 ; Fight Ridley before getting Gravity Suit (luce seyfarth)
 .org 0x80322D2

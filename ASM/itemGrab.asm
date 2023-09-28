@@ -1,31 +1,58 @@
 ﻿itemGrabasm:
+
+.org 0x8014090 ; 02 0E -> 00 22
+	mov r0,2h ; pick up items already acquired, for testing purposes
+
+.org 0x8055fa4
+	.byte 0xE
+.org 0x8055fa8
+	b 0x8055fb4
+.org 0x8056008
+	.byte 0xF
+
+.org 0x8056054 ; set X pos
+	.word 0x280 
+.org 0x8056020 ; set Y pos
+	mov r0,#0x60
+	lsl r0,r0,#0x4
+.org 0x805FED0
+	b 0x8060318
+
+
 ; 2 - Line text boxes (biospark)
-; .org 0x801B910
-   ; nop
-   ; nop
-.org 0x801B8F2
- b 0x801B914
+.org 0x801B910
+   nop
+   nop
 
-; 36 is appearance jingle
-; 37 is new item
-; 3A is expansion
-; 42 is unknown item
-; 4A is fully powered jingle
+.org 0x801BAF0
+	bl 		0x804F670		;refreshes beam GFX (thanks biospark)	
+;	b 		0x801BB00		;prevents going to status screen when getting an item
 
-;additional options
-;.org 0x801B8CC				; Play sound routine for abilities (Prevents music from cutting off)
-;   bl PlaySound
-;.org 0x801B886				; sound for unknown items
-;   mov r0,0x3A   
-;.org 0x801B898				; sound for abilities
-;    mov r0,0x3A
-;.org 0x801B8C8
-;	mov r0,0x4A				; full power jingle
+;change pointer from SetPauseFlag to unused RAM
+.org 0x8055FA0
+	.word	0x3000C22
+.org 0x8060FA4
+	.word	0x3000C22
+.org 0x801BB10
+	.word	0x3000C22
+.org 0x8060F90
+	.word	0x3000C22
+.org 0x8056004
+	.word	0x801BB00
+.org 0x8056064
+	.word	0x801BB00
+.org 0x8055FE6
+	mov pc,r0
+.org 0x8056048
+	mov pc,r0
+.org 0x801baf4
+	bl CheckSuitAnim
+
 
 ; .org 0x801B920
-    ; .byte 14h ;makes ability messages two lines
+	; .byte 14h ;makes ability messages two lines
 ; .org 0x801B950
-    ; .byte 14h ;makes ability messages use the proper timer
+	; .byte 14h ;makes ability messages use the proper timer
 
 .org 0x801B958				;time before an ability message can be closed (default 64h)
 	mov		r0,32h
@@ -39,25 +66,22 @@
 	mov		r0,0h
 .endif
 
-.org 0x801BAF0
-	bl 		0x804F670		;refreshes beam GFX (thanks biospark)	
-	b 		0x801BB00		;prevents going to status screen when getting an item
 .org 0x8013172
-	bl	EquipmentGet		;MorphBall
+	bl EquipmentGet		;MorphBall
 .org 0x8013B26
-	bl	EquipmentGet		;SpeedBooster
+	bl EquipmentGet		;SpeedBooster
 .org 0x8013B3E
-	bl	EquipmentGet		;HiJump
+	bl EquipmentGet		;HiJump
 .org 0x8013B5E
-	bl	EquipmentGet		;ScrewAttack
+	bl EquipmentGet		;ScrewAttack
 .org 0x8013B7E
-	bl	EquipmentGet		;Varia
+	bl EquipmentGet		;Varia
 .org 0x8013BB6
-	bl	EquipmentGet		;Gravity
+	bl EquipmentGet		;Gravity
 .org 0x80133B0
-	bl	EquipmentGet		;Grip
+	bl EquipmentGet		;Grip
 .org 0x8013B9E
-	bl	EquipmentGet		;SpaceJump
+	bl EquipmentGet		;SpaceJump
 .org 0x8013AC6
 	bl	BeamGet				;LongBeam
 .org 0x8013ADE

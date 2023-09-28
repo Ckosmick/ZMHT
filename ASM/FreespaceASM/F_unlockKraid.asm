@@ -1,4 +1,4 @@
-UnlockKraidDoors:
+UnlockDoors:
 	ldr r0,=DoorUnlockTimer
 	mov r1,0FFh
 	strb r1,[r0]

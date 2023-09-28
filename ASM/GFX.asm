@@ -1,39 +1,45 @@
 ; This replaces the flashing hatch graphics for the mothership, for when red hatches take more than one missile to open.
 .org 0x85DA40C
-	.import "GFX\mothership.gfx"
+	.import "ASM\GFX\mothership.gfx"
 ;
 ; This replaces the USA font with the EUR font.
 .org 0x8415C60
-	.import "GFX\ZMUFont.gfx"
+	.import "ASM\GFX\ZMUFont.gfx"
 .org 0x841D460
-	.import "GFX\ZMUFont.gfx"
+	.import "ASM\GFX\ZMUFont.gfx"
 ; This adds a special character from EUR that says [100%].
 .org 0x841B780
-	.import "GFX\100.gfx"	
+	.import "ASM\GFX\100.gfx"	
 ;
 ; Updates Character Widths for using EUR font
 .org 0x840D7B0
-	.import "GFX\ZMUFontWidths.bin"
+	.import "ASM\GFX\ZMUFontWidths.bin"
 
 .org 0x8400E08
-	.incbin "GFX\status.lz"
+	.incbin "ASM\GFX\status.lz"
+	
+.org 0x8409d70
+	.incbin "ASM\GFX\items.lz"
+	
+.org 0x83FEFB8
+	.incbin "ASM\GFX\icons.lz"
 
 ; Compact HUD, low energy HUD, 3 colors HUD, 4th map color HUD
 .org 0x832BAC8
-	.incbin "GFX\genspritept1.gfx"
+	.incbin "ASM\GFX\genspritept1.gfx"
 .org 0x8331348
-	.incbin "GFX\genspritept2.gfx"
+	.incbin "ASM\GFX\genspritept2.gfx"
 .org 0x832BA4E ; shade of yellow for generic sprite
 	.halfword 0x02D6
 ; transparent map
 .org 0x840E0C4
-	.incbin "GFX\map.gfx"
+	.incbin "ASM\GFX\map.gfx"
 	
 ; mini escape timer
 .org 0x832618C
-	.incbin "GFX\timer.gfx"
+	.incbin "ASM\GFX\timer.gfx"
 .org 0x833d794
-	.incbin "GFX\timer.gfx"
+	.incbin "ASM\GFX\timer.gfx"
 .org 0x833DF9E ; second digit X
 	.byte 06h
 .org 0x833DFA4 ; first colon X
@@ -79,10 +85,10 @@
     mov r1,84h
 
 .org 0x85E0420
-	.incbin "GFX\zebesunlock.pal"
+	.incbin "ASM\GFX\zebesunlock.pal"
 
 .org 0x85E0220
-	.incbin "GFX\shipunlock.pal"
+	.incbin "ASM\GFX\shipunlock.pal"
 
 ; minimap blank tiles replaced with air
 ; .org 0x840d700

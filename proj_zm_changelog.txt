@@ -1,0 +1,346 @@
++===========+
+| CHANGELOG |
++===========+
+Project ZM v0.8.3 --7/10/2022
+https://imgur.com/a/NcqdQOx
+Fixed the following:
+- Misplaced chozo statue in Norfair 6
+- Slippery platforming due to physics changes
+- Missing elevator in Tourian after MB dies
+
+Gameplay changes:
+- Missiles and super missiles now also reveal breakable blocks.
+- Gallery is now always available.
+- Fusion gallery is now accessible without system link.
+- Time attack records are now viewable before completing a time attack run.
+- Moved all difficulty changes to the enable unknown items patch.
+- [unk_itm]Mecha ridley also has a 100% items check for his glass cap, which now matches the check % of his body.
+- significantly improved tractor beam.
+- minimap increased to 5 x 3 dimensions.
+- shinespark impact reverted back to its original pose, instead having a reduced delay after impact.
+- delay before ballspark reduced to match delay before shinespark.
+
+Aesthetic changes:
+- Charge beam muzzle flare visible while spin jumping a la AM2R.
+- Background of west brinstar was made dark blue.
+- "Connector" room between brinstar east & west was made to have a more natural transition.
+- In place of the Gallery unlock message is a message for how to play Time Attack.
+- New slightly smaller escape timer graphics.
+- Less obnoxious title screen. Version is in bottom right corner, and a "V" is in bottom left for the enable unknown items patch.
+
+Level design changes:
+- Added mothership shortcut to Chozodia 4E. Requires early power bombs and shinespark knowledge.
+- Changed missile tank lava trap in Ridley to use fake lava, so it's less unfair for players who skip grip.
+- Power bomb block shortcut in mothership was widened.
+
+Project ZM v0.8.2 --11/06/2021
+Fixed the following:
+- Stuck in Norfair 6
+- Softlock in Norfair 8 if player skips missiles, long beam, or bombs
+- Messed up particles + droplets due to 4th minimap color and yellow power bombs
+
+Gameplay changes:
+- Updated power bomb jumping also activates morph ball launchers
+
+Aesthetic changes:
+- Changed screw attack particles' green outline to purple
+
+Project ZM v0.8.1 --10/17/2021
+Fixed the following:
+UPDATED THE README! PLEASE TAKE A LOOK
+- Softlocks in Norfair 1 and Norfair 8 related to norfair before bombs
+- Fixed new physics knockback
+- Fixed softlock caused by killing Imago with pseudo-screw attack (kiliwily)
+- Tiling errors in Crateria 7, 9, F
+
+Gameplay changes:
+- Power bomb jumping (kiliwily)
+- Room transitions added back in for standard patch
+
+Enemy changes:
+- Imago is once again vulnerable to charge beam
+- Mecha ridley harder fight check changed from >30% items to >=60%
+
+World design changes:
+- Crateria 9 path up is more obvious
+- Norfair 0 redesign for Norfair before bombs
+- Standard patch: shifted speed booster hint chozo down 1 block for Norfair before bombs
+
+Project ZM v0.8.0 --09/20/2021
+===============
+Fixed the following:
+- [UNK_ITEMS] Brinstar 26 had leftover wave beam statues in other spritesets.
+- Increased Ridley Aggro threshold to >2 missiles
+- Missing clipdata top right of Chozodia 3E (C3 D3 E3) and Kraid 1C (C5)
+- Crateria 8 still had a locked door
+- Brinstar 0 Tiling error
+- [Unknown Items] Crateria 9 -> E door was green inside which soft locked people without super missiles
+- Attract demos were messed up by the new physics
+- [Unknown Items] speedbooster hint statue was still placed in Hard difficulty
+- Kraid 7's Mua skip shortcut would make acid in the room transparent until the room was reloaded
+- map station downloads had map tile 0 on the bottom edge of the screen
+- changed palette slot of shadows in tileset 4A from F to 5
+- Crateria 8, 10 morph maze changed from bg2 to bg0
+- changed palette slot of BG2 elements in tileset 10 from 3 to 6
+- [Unknown Items] Fixed a Misplaced door in Tourian D
+- tiling error @ crateria 9, F
+- tiling error @ chozodia D
+- Removed drops I previously added from sprites A6, A7 (chozodia security eye lasers) due to drops breaking their AI on death
+- Bunch of sprites still had maroon outlines
+
+Gameplay changes:
+- All Charge beam damage doubled in standard patch (No Unknown Items)
+- [Unknown Items] Plasma beam damage further reduced. Plasma Charge shots deal Vanilla damage.
+Plasma = 1_______________________(3 in Vanilla)
+Plasma + Long/Wave = 2__________(4 in Vanilla)
+Plasma + Ice = 2_________________(4 in Vanilla)
+Plasma + Ice + Long/Wave = 2____(5 in Vanilla)
+All beams = 2____________________(6 in Vanilla)
+- Power Bomb Vulnerabilities added to Primary Sprites
+    16, 17, 71 (Brown/Purple/Jet Rippers)
+    61 (Ridley)
+    65 (Frozen Metroid)
+    67 (Ball Spitter)
+    73 (Atomic)
+    75 (Mother Brain)
+    7D, 87 (Zebetites)
+    86 (Imago)
+    BD (Mecha Ridley)
+- Power Bomb Vulnerabilities added to Secondary Sprites 
+    3 (Kraid)
+    A (Deorem)
+    20 (MB Jar)
+    27 (MB Turret Shot)
+    36 (Gadora Eye)
+    44 (Mecha Ridley Glass Cover)
+- Removed Deorem tweak: Deorem will once again run away like in vanilla
+- Removed Charge Beam vulnerability from Sprite 86 (Imago) due to it softlocking the game if the final blow is Pseudo Screw Attack. Recover ammo by shooting his stinger projectiles!
+- Mid air ball spark is once again possible without hi jump (Another way to get early Power Bombs)
+- Respin out of a shinespark (credit: Captain Glitch)
+- Retain shinespark charge after taking damage (credit: Captain Glitch)
+- Shinespark in 2 block tall passages (credit: kiliwily)
+- Screw attack and speed booster reveal hidden tanks (credit: kiliwily) 
+- Screw attack breaks bomb chain blocks (credit: kiliwily)
+- Separate weapon highlight colors (credit: raygun)
+- Beam burst (Fire charged shots with B while PBs selected) (credit: raygun)
+- Bomb jumping in water (credit: somerando)
+- Ingame message close timer set to 0x32 (up from 0) for readability. Still 0 for unknown items
+
+Aesthetic changes:
+- Ridley boss tile adjustment (credit: somerando)
+- Replace "New" in file select with "New Game+"
+- Applied MZM recolor patch to standard and Unknown Items
+- "Crateria" text added left edge of Chozodia map
+- Title screen overhauled with version number & date
+- Low energy red digits (credit: raygun)
+- added bg2 behind pit blocks in norfair 22/2B/36
+
+World Design Changes:
+- Removed power grip barrier in Norfair 4 for all difficulties in standard patch
+- Reverted the locations of Space Jump and Plasma Beam to their original locations
+- Allow Norfair before bombs
+- Allow early PBs from Norfair 37 (lava pit) (lock Crateria 1 Hatch 2, 7 hatch 1, and 9 hatch 1 before event 43)
+- Crateria 8, 9, 10, 11, Norfair 1, 2F made easier for Norfair before bombs
+- Removed power bomb shortcut in Tourian 0/F (main elevator)
+- Moved Tourian map room to be optional again (behind missile hatch)
+- Map and room adjustments for bottom of Norfair 2B and Ridley 2 to have arrows connecting the areas (Kiru Giru -> Imago)
+- Norfair 5: changed reforming shot block at the top of ridley shortcut and by bottom missile tank to no reform
+- Simplified Ridley B (Ridley farm room) and Crateria 0 (Landing Site)
+- Norfair 38 (Kraid <-> Norfair shortcut) Replaced Power Bomb blocks with Screw Attack blocks
+- Kraid C: (Escape zipline) Undid one way exit, replaced with gray door (unlock Kraid 0 Hatch 5 when event 1E)
+- Replace 1x platforms with speed booster blocks in Kraid 0 (Main elevator)
+- Brinstar 3 and 7 partial shinespark shortcut (Blue + Brown brinstar vertical shafts)
+- Landing site PB moved to Crateria B (Ripper pool)
+- Crateria 7, 9, A, D power bomb doors changed to regular doors (Locked, unlock after fully powered suit obtained)
+- replaced solid blocks in center of Ridley 5 with speed boost blocks
+- added exit for potential softlock at Chozodia 47 energy tank (Next to Mecha Ridley)
+- [Unknown Items] Crateria 7 super missile door changed to regular door
+
+
+Project ZM v0.7.3 -- 10/27/2020
+===============
+Fixed the following:
+- [UNK_ITEMS] Unknown items were given, but could not be toggled and did not change samus' appearance.
+- In the status screen, weapon descriptions were not control ambiguous.
+- [UNK_ITEMS] Brinstar 2 had leftover long beam statues in other spritesets.
+
+Gameplay changes:
+- Zero Suit samus now also has a 3-frame walljump animation, matching the power suit.
+- Status screen, World map (A on map screen), and Sleep screen can now all be left with START.
+- Any button can be used to resume after using a save station.
+
+Aesthetic changes:
+- Title screen "ZERO MISSION" graphics updated to "PROJECT ZM"
+- Title screen year "2004" updated to "2020"
+
+Project ZM v0.7.2 -- 10/16/2020
+===============
+Fixed the following:
+- Using Kraid C as an area shortcut was unintended. This room has been updated.
+- The doors Tourian 0 connected to had inconsistent connections, making the power bomb shortcut a mess. Now, only the first save station (Tourian B, door 18) uses an event connection, and all doors will eventually connect to Tourian F.
+- Demo A in Kraid needed samus' Y position updated as it was out of bounds.
+- Chozodia 1F was not possible to perfect-stealth due to projectiles hitting the ceiling above the pirate. The breakable wall has been shifted down one tile, and the pirate moved forward one tile.
+
+Gameplay changes: 
+- Removed autocharge beam.
+- Doubled charge beam damage, to make it a worthwhile ability.
+- Text messages can be instantly closed.
+- Undid statue swaps in Unknown Items.
+- Mecha Ridley's "100% mode" threshold is increased from >10% to >30% items.
+- Moved first seen space pirate in Chozodia 5 back to his original spot, he still patrols the room.
+
+World Design Changes:
+- Redid super missile door for Crateria E in unknown items patch variants.
+- Removed Unnecessary chozo statues from the unknown items patch variants.
+- A small shortcut was added to the hidden missile tank in Norfair 2A.
+- The bottom crumble block in Crateria 8 (outside power grip) has been changed to a slow crumble block.
+
+Aesthetic Changes:
+- Slightly improved Deorem's graphics.
+
+Project ZM v0.7.1 -- 07/08/2020
+===============
+Fixed the following:
+- In hard mode, the elevator in Brinstar 0 is missing
+- Auto charge beam was missing. Depending on player reception it will either stay or go.
+- The regular patches still have unknown items enabled messages
+- Map station messages could use a second line of text
+- [UNK_ITEMS] It's possible to skip Kraid with a shortcharge (You still have to kill him though)
+- Forgot to add pitblock shortcut to the Norfair 4 missile tank
+- More ambiguous explosive weapon messages
+- speedboost blocks in brinstar 1 were accidentally made no reform shot blocks, not no reform speedboost blocks
+- Power bomb display in NG+ has not been changed to yellow to match the new PB design
+
+Gameplay changes:
+- Made Kraid harder by having his nails always have hard mode speed
+- Reduced mecha ridley fireball health and improved fireball/missile drops
+
+Known Issues:
+[UNK_ITEMS] Completing the chozo trial acts as though you didn't have the fully powered suit
+(Vanilla bug) Every certain number of frames, you cannot exit the zipline
+
+Project ZM v0.7.0 -- 07/07/2020
+===============
+Introducing separate patches for unknown items (proj_zm_xxx_unk, proj_zm_xxx_rtoggle_unk)
+
+Gameplay changes:
+- Bomb cooldown was brought back down to 7 frames (vanilla) from 11 frames. Spam away!
+- Enemy drop rates are doubled, some enemies higher than that
+- Fixed and reintroduced cutscene skipping with B
+- raygun: Beam Autocharge
+- Captain Glitch: Respin out of shinespark
+
+World design changes:
+- Replaced reforming speedbooster blocks in Brinstar 1 with no reform speedbooster blocks
+- Prevented a possible softlock in Chozodia 5E
+- [UNK_ITEMS] Swapped the location of plasma beam and wave beam
+- [UNK_ITEMS] Swapped the location of space jump and speed booster
+- [UNK_ITEMS] Removed chozo hints
+- Removed the invisible crateria power bomb tank
+- Removed the leftover gravity suit block in ridley
+
+Aesthetic Changes:
+- Added a black border to inactive HUD weapons
+
+Known issues:
+- Power bomb display in NG+ has not been changed to yellow to match the new PB design
+- [UNK_ITEMS] Completing the chozo trial acts as though you didn't have the fully powered suit
+- (Vanilla bug) Every certain number of frames, you cannot exit the zipline
+
+
+Project ZM v0.6.4 -- 04/07/2020
+===============
+raygun: Fixed small issue with GBA controls.
+
+Project ZM v0.6.3 -- 04/06/2020
+===============
+raygun: More fixes for SM controls patch (ziplines)
+
+World design changes:
+- You start at your ship
+- An elevator connects Crateria and Brinstar
+- "Wisconsin" was deleted from landing site
+
+Gameplay changes:
+- Ridley is more aggressive
+- Mecha Ridley used to check for 100% to be harder, now it's >10%
+- Took out the experimental Time Attack always on tweak
+(You can still play time attack by pressing A on a completed save, then pressing Up Left Right Down)
+
+Aesthetic changes:
+- Hud weapons changed back to be yellow when armed
+
+- Power bombs are yellow and more rounded off in HUD
+- Power bomb tanks are yellow/orange (including the one the pirate carries)
+- Power bomb blocks are yellow/orange
+- Power bombs have a flashier animation when placed
+
+- Bombs make use of yellows and greens, looks neat and helps with visual cues
+
+Project ZM v0.6.2 -- 03/29/2020
+===============
+◘ Further fixes for SM controls patch
+◘ World design change: Chozodia 22 correctly scrolls both vertically and horizontally
+◘ Added back the solid wall effect in Brinstar 2 before using long beam statue
+◘ Fixed bad backgrounds in the map station download screens due to tiles having transparency
+◘ Balance changes: Plasma beam is 50% weaker in all forms
+◘ Removed cutscene skip shortcut as it causes issues with sounds that cannot be fixed
+◘ Message boxes close faster, about as soon as the expansion tank sound plays
+
+Project ZM v0.6.1 -- 03/21/2020
+===============
+◘ Emergency fix for GBA controls in main patch
+◘ World design change: Pirates in Chozodia E moved closer to middle of room
+
+Project ZM v0.6 -- 03/20/2020
+===============
+◘ Gameplay changes:
+	- SM Controls was rewritten and is now a togglable ingame option, in place of sound settings. (GBA Controls default) Worry not, the audio is now stereo by default.
+	- Shinespark steering was rewritten to allow for vertical steering.
+	- SM Style item grabbing was simplified.
+	- A complete overhaul of ZM's physics by Captain Glitch! Samus' momentum is preserved, midair morphing doesn't stop you, and you can even build up a speedboost on multiple platforms. Mockball is a thing. Get ready TASers!
+	- Super Metroid style projectiles: Running and shooting makes the projectile as fast as it is set + your move speed, but when standing still it doesnt care about your move speed.
+	- Gravity Suit requires Varia to be resistant to heat, weak acid and lava. This ensures that Varia is now an item more worth grabbing.
+	- Elevator and boss intro cutscenes can be skipped by pressing B.
+◘ Visual changes:
+	- New compact HUD and map graphics.
+	- The mothership has its own unique breakable tiles graphics.
+	- Varia suit determines the bigger suit graphics, not Gravity Suit.
+	- In light of the above change, gravity suit has had a very slight adjustment to its palette to look okay in low power form.
+◘ Fixed errors:
+	- Unable to toggle unknown items
+	- Grabbing unknown items played the wrong message and sound
+	- Gravity suit not visible
+	- Tiling error in Brinstar 14
+	- Tiling error in Brinstar C
+	- Minimap map station tiling error in tourian
+	- Player was able to springball off of corners of tiles without high jump
+	- Poor enemy placement in Norfair A, Chozodia 1D and Chozodia 5A
+◘ World design changes:
+	- Plasma beam is locked behind a super missile hatch, which means a requirement of at least one boss to be defeated before it can be accessed
+	- The path below the wave beam chozo in Brinstar 15 now too contains beetles to skip the statue for a faster early varia
+	- Added a zeb to Brinstar 15
+	- Rooms containing zebs now have a hardmode variant with the unused blue zebs
+	- Tourian has a map station.
+	- Brinstar A was given a left steep slope on Kraid's part of the gate, no longer requiring a jump
+	- The floor in Brinstar 10 was flattened, no longer requiring a jump
+	- Norfair 20 has more blocks replaced with speedbooster blocks which should make sparking through it easier.
+◘ Balance:
+	- Redid rinka drops to hopefully be more fair. Below is technical information about changes made.
++=======================================+
+|	0x400 Total drop chance budget		|
++=======================================+
+|No drop: 		|	25C or 16C 	--> 100	|
+|Small energy: 	|	A or 0 		--> A	|
+|Large energy: 	|	32			--> 32	|
+|Missile: 		|	15E or 258 	--> 2BA	|
+|Super Missile: |	A			--> A	|
+|Power Bomb: 	|	0			--> 0	|
++=======================================+
+
+
+Project ZM v0.5.1 -- 02/10/2020
+◘ Made the secret path to power grip more obvious
+◘ Made the super missile block near varia suit room into a missile block, and more obvious so people don't get stuck/lost as much
+◘ Weakened Mecha ridley's missiles to make 4% more viable
+◘ Fixed a bunch of tiling errors in the room before varia suit

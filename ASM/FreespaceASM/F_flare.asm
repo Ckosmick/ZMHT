@@ -384,32 +384,32 @@ vertflareoam:
 
 .align 0x10
 hor1:
-.import "GFX\flareHor\hor1.gfx"
+.import "ASM\GFX\flareHor\hor1.gfx"
 hor2:
-.import "GFX\flareHor\hor2.gfx"
+.import "ASM\GFX\flareHor\hor2.gfx"
 hor3:
-.import "GFX\flareHor\hor3.gfx"
+.import "ASM\GFX\flareHor\hor3.gfx"
 hor4:
-.import "GFX\flareHor\hor4.gfx"
+.import "ASM\GFX\flareHor\hor4.gfx"
 hor5:
-.import "GFX\flareHor\hor5.gfx"
+.import "ASM\GFX\flareHor\hor5.gfx"
 diag1:
-.import "GFX\flareDiag\diag1.gfx"
+.import "ASM\GFX\flareDiag\diag1.gfx"
 diag2:
-.import "GFX\flareDiag\diag2.gfx"
+.import "ASM\GFX\flareDiag\diag2.gfx"
 diag3:
-.import "GFX\flareDiag\diag3.gfx"
+.import "ASM\GFX\flareDiag\diag3.gfx"
 diag4:
-.import "GFX\flareDiag\diag4.gfx"
+.import "ASM\GFX\flareDiag\diag4.gfx"
 diag5:
-.import "GFX\flareDiag\diag5.gfx"
+.import "ASM\GFX\flareDiag\diag5.gfx"
 vert1:
-.import "GFX\flareVert\vert1.gfx"
+.import "ASM\GFX\flareVert\vert1.gfx"
 vert2:
-.import "GFX\flareVert\vert2.gfx"
+.import "ASM\GFX\flareVert\vert2.gfx"
 vert3:
-.import "GFX\flareVert\vert3.gfx"
+.import "ASM\GFX\flareVert\vert3.gfx"
 vert4:
-.import "GFX\flareVert\vert4.gfx"
+.import "ASM\GFX\flareVert\vert4.gfx"
 vert5:
-.import "GFX\flareVert\vert5.gfx"
+.import "ASM\GFX\flareVert\vert5.gfx"

@@ -1,0 +1,14 @@
+[Meta]
+GameCode=BMXE
+VersionCreated=1.3.2
+DateCreated=2018-06-15T17:03:11
+VersionModified=1.3.2
+DateModified=2021-10-17T13:54:10
+
+[Project]
+RoomsPerArea=2A,2A,39,21,15,17,73
+NumOfTilesets=4F
+NumOfAnimTilesets=8
+NumOfAnimGfx=26
+NumOfAnimPalettes=12
+NumOfSpritesets=77
