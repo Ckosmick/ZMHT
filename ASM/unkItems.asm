@@ -1,14 +1,4 @@
 unkItemsasm:
-.org 0x8014090 ; 02 0E -> 00 22
-	mov r0,2h ; pick up items already acquired, for testing purposes
-
-; Set no item to be unknown in the 3 groups
-.org 0x807122A
-	.byte 0xFF
-.org 0x8071248
-	.byte 0xFF
-.org 0x8071252
-	.byte 0xFF
 
 ;-----------
 ; Full Suit
@@ -49,6 +39,13 @@ unkItemsasm:
 	bl      GetSoundNumber
 	bl      PlaySound
 	b       0x8071144
+; Set no item to be unknown in the 3 groups
+.org 0x807122A
+	.byte 0xFF
+.org 0x8071248
+	.byte 0xFF
+.org 0x8071252
+	.byte 0xFF
 	
 ;----------------
 ; Obtaining Suit
@@ -67,112 +64,7 @@ unkItemsasm:
 ; don't change varia's map tile with full suit
 .org 0x806B212
     b       0x806B22E	
-
-.ifndef itemGrabasm
-; gravity get animation as soon as it is acquired
-.org 0x8055FA4
-	cmp		r0,6h
-	bne		@@aftercharlie
-	ldr		r0,=3000BF2h ; current item being acquired
-	ldrb	r0,[r0]
-	cmp		r0,0Eh ; varia
-	beq		@@variaget
-	cmp		r0,0Fh ; gravity
-	bne		8056074h ; load tileset
-; gravity get
-	ldr		r2,=3001530h
-	ldrb	r1,[r2,0Fh]
-	mov		r0,0DFh ; varia, 0DF for gravity
-	and		r0,r1
-	strb	r0,[r2,0Fh]
-;	mov		r0,1Eh
-;	bl		80074E8h ; set samus pose to facing foreground
-;	mov		r5,0h
-;	ldr		r4,=30013D4h
-;	mov		r0,9Eh
-;	lsl		r0,r0,2h
-;	strh	r0,[r4,12h] ; X Pos
-;	sub		r0,79h
-;	strh	r0,[r4,14h] ; Y Pos
-	b		@@return
-;	ldr		r1,=3000049h
-;	mov		r0,1h
-;	strb	r0,[r1]
-;	ldr		r0,=3001414h
-;	strb	r5,[r0,5h]
-;	mov		r0,1h
-;	strh	r0,[r4,0Ch]
-;	b		8056074h ; load tileset
-@@variaget:
-	ldr		r2,=3001530h
-	ldrb	r1,[r2,0Fh]
-	mov		r0,0EFh ; varia, 0DF for gravity
-	and		r0,r1
-	strb	r0,[r2,0Fh]
-;	mov		r0,1Eh
-;	bl		80074E8h ; set samus pose to facing foreground
-;	mov		r5,0h
-;	ldr		r4,=30013D4h
-;	mov		r0,9Eh
-;	lsl		r0,r0,2h
-;	strh	r0,[r4,12h] ; X Pos
-;	sub		r0,79h
-;	strh	r0,[r4,14h] ; Y Pos
-;	ldr		r1,=300019Ch
-;	strb	r5,[r1,2h]
-;	mov		r0,9h
-;	strb	r0,[r1,4h]
-;	bl		806041Ch ; start in game cutscene
-	b		@@return
-@@return:
-	mov		r0,1Eh
-	bl		80074E8h ; set samus pose to facing foreground
-	mov		r5,0h
-	ldr		r1,=300019Ch
-	strb	r5,[r1,2h]
-	mov		r0,9h
-	strb	r0,[r1,4h]
-	bl		806041Ch ; start in game cutscene
-	ldr		r1,=3000049h
-	mov		r0,1h
-	strb	r0,[r1]
-	ldr		r0,=3001414h
-	strb	r5,[r0,5h]
-	mov		r0,1h
-	strh	r0,[r4,0Ch]
-	b 		8056074h
-	.pool
-;.org 0x8056008
-@@aftercharlie:
-	cmp		r0,8h
-	bne		8056068h
-	mov		r0,1Eh
-	bl		80074E8h ; set samus pose
-	ldr		r4,=30013D4h
-	mov		r5,0h
-	mov		r0,0C4h
-	lsl		r0,r0,3h
-	strh	r0,[r4,12h] ; X Pos
-	ldr		r0,=7BFh
-	strh	r0,[r4,14h] ; Y Pos
-	ldr		r1,=300019Ch
-	strb	r5,[r1,2h]
-	mov		r0,0Ah
-	strb	r0,[r1,4h]
-	bl		806041Ch ; start in game cutscene
-	ldr		r1,=3000049h
-	mov		r0,1h
-	strb	r0,[r1]
-	mov		r0,1h
-	strh	r0,[r4,0Ch]
-	ldr		r1,=3000BF2h ; current item being acquired
-	mov		r0,0Fh
-	strb	r0,[r1]
-	ldr		r0,=3001414h
-	strb	r5,[r0,5h]
-	b		8056074h ; load tileset
-	.pool
-.endif
+	
 ;------
 ; Text
 ;------
@@ -189,7 +81,13 @@ unkItemsasm:
 .org 0x8442D22		; Unknown Item
 	.halfword 0x804A,0x8105,0x0095,0x00CE,0x00CB,0x00CE,0x00CF,0x00D7,0x00CE,0x0040,0x0089,0x00D4,0x00C5,0x00CD,0xFE00,0x806E,0xFF00
 	
-
+; replace status screen unknown item gfx
+.org 0x8400E08
+	.incbin "ASM\GFX\status.lz"
+.org 0x8409d70
+	.incbin "ASM\GFX\items.lz"
+.org 0x83FEFB8
+	.incbin "ASM\GFX\icons.lz"
 ;
 
 ;-------
