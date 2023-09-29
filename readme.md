@@ -114,7 +114,6 @@ ZMHT v0.5.1 -- 2/9/2020
 	- To disable an ASM patch, open zmht.asm in a text editor and add a semicolon (;) in front of lines of patches you do not want to have applied. Then, re-run armips. It will overwrite the previous output.gba file.
 
 # Contents
-This ASM patch is a combination of:
 	- Tweaks -- Various hex tweaks. Give them a look!
 	- BallSpark -- This enables initiating a morph ball shinespark, in midair.
 	- BetterMorphRoll -- When you are in morph ball form, standing still pauses morph ball's animation.
