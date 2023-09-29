@@ -1,74 +1,16 @@
 # Zero Mission Arbitrarily Compilable Community Pack
 A modular codebase for your next metroid zero mission hack.
 
-ZMHT v0.3 -- 07/14/2022
-=============
-Changes:
-	- Main ASM has been CLEANED UP! Only requiring one comment in the main ASM to toggle stuff on and off.
-	- Captain Glitch's physics patch has been renamed to newPhysics, from glitchPhysX.
-	- Biospark's tractor beam ASM has been further improved by Captain Glitch, Quote, and Raygun.
-	- New physics have been made less slippery.
-	- Settings.asm, for easier access to labels meant to be changed (i.e. MaxPercent and BigSuit)
-	- further fixes to raygun's sm controls
+# Directions
+- Put a vanilla MZM (U) rom in the extracted folder and rename it to [zm.gba].  
+- Drag [zmht.asm] over armips.exe and armips should spit out a file named [output.gba].
+- To disable an ASM patch, open zmht.asm in a text editor and add a semicolon (;) in front of lines of patches you do not want to have applied. Then, re-run armips. It will overwrite the previous output.gba file.
 
-New ASM:
-	- raygun's better wall jumping
-	- raygun's beam flare damage
-	- somerando(cauuyjdp)'s 5x3 minimap
-	- somerando(cauuyjdp)'s speedy doors (can be opened with shinespark)
-	- 3 block tall doors by yohann, somerando(cauuyjdp) and Cosmic
-	- jumzhu's walljump on frozen enemies
-	- raygun's per-weapon HUD digits
-	- raygun's low energy digits
-	- kiliwily's no bomb jumping when down is held
-	- kiliwily's bomb jump with power bombs
-	- yohann's faster save stations
+# Known Issues
+TODO
 
-New Tweaks:
-	- A lot man just go take a look lol i made sure to describe what they do
-	- Adjustable frame timers for running, spinjumping
-	- Showing charge beam muzzle flare during a spin jump
-	- Ballspark having the same delay before and after as shinespark
-	- Chozodian stations == Refill stations
-
-ZMHT v0.2 -- 03/29/2020
-=============
-
-New ASM:
-	- raygun's chargeHeal
-	- raygun's plasmaNerf
-	- Captain Glitch's new physics
-	- replaced Capt Glitch's SM Controls with raygun's
-	- raygun's SM Projectiles
-	- rewritten version of Capt Glitch's SM item grabbing
-	- Raygun's Fix for minimap graphics that have transparency
-
-Customization:
-
-Labels.asm
-	- Choose what determines suit GFX in the unknown items asm
-
-Tweaks.asm
-	- Gravity heat vulnerability ASM replaced with a tweak
-	- No sounds after ship lands in intro
-	- Raygun's more detailed beam damage settings
-	- Enemies do not experience stun on hardmode
-	- Walljump with spacejump
-	- Speedball jumping
-	- Pseudo Screw Attack damage values
-	- Faster room transitions
-
-ZMHT v0.5.1 -- 2/9/2020
-=============
--	Initial Release
-
-# KNOWN ISSUES
-	- SM controls: 				    Usable, not perfect. When firing upward with L + R, samus will aim at an angle for a moment. Charge beam stops working with power bombs selected.
-	- Modified SM item grabbing: 	Mostly works, but music does not play in room where you reobtain suit. I haven't figured it out yet.
-	- Charge beam concentration: 	Samus' palette doesn't animate when her beam is charged, it just stays glowing.
-
-# CREDITS
-biospark --
+# Credits
+    biospark --
 	- Customizable 4th minimap color
 	- Enable Unknown Items
 	- Power Bombs before Bombs
@@ -81,7 +23,7 @@ biospark --
 	- Adjustable Starting Room
 	- Two-Line Text Boxes
 	
-Captain Glitch --
+    Captain Glitch --
 	- Adjustable escape timers
 	- Better Morphball Rolling
 	- SM style controls
@@ -92,14 +34,14 @@ Captain Glitch --
 	- speedbooster in morphball
 	- unlocking of Kraid's doors
 			
-Cosmic --
+    Cosmic --
 	- Slow in Liquids
 	- More Map Station Messages
 			
-JumZhu.Diwa -- 
+    JumZhu.Diwa -- 
 	- Walljumping with space jump tweak
 	
-Raygun -- 
+    Raygun -- 
 	- Plasma beam nerf
 	- Super Metroid style projectiles
 	- SM Controls
@@ -107,27 +49,22 @@ Raygun --
 	- Charge beam flare
 	- Many tweaks
 	
-Somerando (Cauuyjdp) --
+    Somerando (Cauuyjdp) --
 	- Tractor Beam
 	- TODO
 
-Yohann --
+    Yohann --
 	- Tractor Beam
 	- TODO
 
-Kiliwily --
+    Kiliwily --
 	- TODO
 	
-jasinchen --
+    jasinchen --
 	- TODO
 
-Quote58 --
+    Quote58 --
 	- Tractor Beam
-	
-# Directions
-	- Put a vanilla MZM (U) rom in the extracted folder and rename it to [zm.gba].  
-	- Drag [zmht.asm] over armips.exe and armips should spit out a file named [output.gba].
-	- To disable an ASM patch, open zmht.asm in a text editor and add a semicolon (;) in front of lines of patches you do not want to have applied. Then, re-run armips. It will overwrite the previous output.gba file.
 
 # Contents
 	- Tweaks -- Various hex tweaks. Give them a look!
@@ -150,5 +87,3 @@ Quote58 --
 	- tractorBeam -- With a fully charged beam you can suck in item drops, a la Metroid Prime.
 	- twoLineTXT -- This makes every item message box 2 lines tall. It's used for faster item grabbing.
 	- unkItems -- Samus' suit is now compatible with unknown items, right from the start!
-
-With possibly more to come in the future!
