@@ -1,0 +1,65 @@
+ZMHT v0.3 -- 07/14/2022
+=============
+# Changes:
+	- Main ASM has been CLEANED UP! Only requiring one comment in the main ASM to toggle stuff on and off.
+	- Captain Glitch's physics patch has been renamed to newPhysics, from glitchPhysX.
+	- Biospark's tractor beam ASM has been further improved by Captain Glitch, Quote, and Raygun.
+	- New physics have been made less slippery.
+	- Settings.asm, for easier access to labels meant to be changed (i.e. MaxPercent and BigSuit)
+	- further fixes to raygun's sm controls
+
+# New ASM:
+	- raygun's better wall jumping
+	- raygun's beam flare damage
+	- somerando(cauuyjdp)'s 5x3 minimap
+	- somerando(cauuyjdp)'s speedy doors (can be opened with shinespark)
+	- 3 block tall doors by yohann, somerando(cauuyjdp) and Cosmic
+	- jumzhu's walljump on frozen enemies
+	- raygun's per-weapon HUD digits
+	- raygun's low energy digits
+	- kiliwily's no bomb jumping when down is held
+	- kiliwily's bomb jump with power bombs
+	- yohann's faster save stations
+
+# New Tweaks:
+	- A lot man just go take a look lol i made sure to describe what they do
+	- Adjustable frame timers for running, spinjumping
+	- Showing charge beam muzzle flare during a spin jump
+	- Ballspark having the same delay before and after as shinespark
+	- Chozodian stations == Refill stations
+
+ZMHT v0.2 -- 03/29/2020
+=============
+
+# New ASM:
+	- raygun's chargeHeal
+	- raygun's plasmaNerf
+	- Captain Glitch's new physics
+	- replaced Capt Glitch's SM Controls with raygun's
+	- raygun's SM Projectiles
+	- rewritten version of Capt Glitch's SM item grabbing
+	- Raygun's Fix for minimap graphics that have transparency
+
+# Customization
+
+    Labels.asm
+	- Choose what determines suit GFX in the unknown items asm
+
+    Tweaks.asm
+	- Gravity heat vulnerability ASM replaced with a tweak
+	- No sounds after ship lands in intro
+	- Raygun's more detailed beam damage settings
+	- Enemies do not experience stun on hardmode
+	- Walljump with spacejump
+	- Speedball jumping
+	- Pseudo Screw Attack damage values
+	- Faster room transitions
+
+ZMHT v0.5.1 -- 2/9/2020
+=============
+-	Initial Release
+
+# KNOWN ISSUES
+	- SM controls: 			Usable, not perfect. When firing upward with L + R, samus will aim at an angle for a moment. Charge beam stops working with power bombs selected.
+	- Modified SM item grabbing: 	Mostly works, but music does not play in room where you reobtain suit. I haven't figured it out yet.
+	- Charge beam concentration: 	Samus' palette doesn't animate when her beam is charged, it just stays glowing.
