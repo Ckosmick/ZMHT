@@ -1,12 +1,12 @@
 .gba
 .open "zm.gba","output.gba",0x8000000
 .notice "Standard"
-; Labels
-.include "ASM\Labels.asm"
 
 ; Options
 .include "Options\Tweaks.asm"
 .include "Options\Settings.asm"
+.include "Options\GFX.asm"
+.include "Options\Labels.asm"
 
 ; ASM
 .include "ASM\breakBlocks.asm"
@@ -20,7 +20,6 @@
 ;.include "ASM\betterRoll.asm"
 .include "ASM\betterWallJump.asm"
 ;.include "ASM\chargeHeal.asm"
-.include "ASM\GFX.asm"
 .include "ASM\itemGrab.asm"
 .include "ASM\itemToggle.asm"
 .include "ASM\mapFix.asm"
@@ -46,6 +45,6 @@
 .include "ASM\imagoCocoonBlocksFix.asm"
 
 ; FREESPACE ASM
-.include "ASM\Freespace.asm"
+.include "Options\Freespace.asm"
 .notice "Done." 
 .close
