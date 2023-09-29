@@ -68,46 +68,62 @@ ZMHT v0.5.1 -- 2/9/2020
 	- Charge beam concentration: 	Samus' palette doesn't animate when her beam is charged, it just stays glowing.
 
 # CREDITS
-	- biospark -- author of MAGE, provided lots of help putting this together. These were his contributions:
-			Customizable 4th minimap color
-			Enable Unknown Items (+ GFX / Text)
-			Enable use of Power Bombs before Bombs
-			Fusion style R-shotting
-			Item percentage scaling
-			Metroid Prime-style tractor beam (Suck in drops with charge beam)
-			Mid-air ballsparking
-			Removal of chozo statue hint system
-			Remove intro closeup of Samus' face
-			SM-style ability toggling in the status screen
-			Adjustable Starting Room
-			Two-Line Text Boxes
+biospark --
+	- Customizable 4th minimap color
+	- Enable Unknown Items
+	- Power Bombs before Bombs
+	- Fusion style R-shotting
+	- Item percentage scaling
+	- Tractor beam (Suck in drops with charge beam)
+	- Mid-air ballsparking
+	- Remove intro closeup
+	- SM Item Toggling
+	- Adjustable Starting Room
+	- Two-Line Text Boxes
 	
-	- Captain Glitch -- Aside from general help with this project, his contributions include:
-			Adjustable escape timers
-			Better Morphball Rolling
-			SM style controls
-			SM style item grabbing
-			Toggle missile select with R
-			gravity suit taking heat damage
-			shinespark steering
-			speedbooster in morphball
-			unlocking of Kraid's doors
+Captain Glitch --
+	- Adjustable escape timers
+	- Better Morphball Rolling
+	- SM style controls
+	- SM style item grabbing
+	- Toggle missile select with R
+	- gravity suit taking heat damage
+	- shinespark steering
+	- speedbooster in morphball
+	- unlocking of Kraid's doors
 			
-	- Cosmic -- bullied biospark and glitch to make this a thing. Also added:
-			Modified Capt. Glitch's faster item grabbing ASM to have a faster jingle (still needs work)
-			Modified biospark's unknown items ASM so that any suit can have the fully powered gfx
+Cosmic --
+	- Slow in Liquids
+	- More Map Station Messages
 			
-	- JumZhu.Diwa -- Walljumping with space jump tweak
+JumZhu.Diwa -- 
+	- Walljumping with space jump tweak
 	
-	- Raygun -- Plasma beam nerf
-	Super Metroid style projectiles
+Raygun -- 
+	- Plasma beam nerf
+	- Super Metroid style projectiles
+	- SM Controls
+	- Colorful HUD
+	- Charge beam flare
+	- Many tweaks
 	
-	- Metroid_Prime_Stratton, Cosmic, Capt Glitch, raygun -- Decompiled version of Capt Glitch's Charge beam concentration ASM.
-	
-	- Metroid Advance Game Construction (MAGConst) -- The metconst subcommunity dedicated to hacking the GBATroids.
-	
-	- Metroid Construction -- The #1 source for all things hacking metroid
+Somerando (Cauuyjdp) --
+	- Tractor Beam
+	- TODO
 
+Yohann --
+	- Tractor Beam
+	- TODO
+
+Kiliwily --
+	- TODO
+	
+jasinchen --
+	- TODO
+
+Quote58 --
+	- Tractor Beam
+	
 # Directions
 	- Put a vanilla MZM (U) rom in the extracted folder and rename it to [zm.gba].  
 	- Drag [zmht.asm] over armips.exe and armips should spit out a file named [output.gba].
