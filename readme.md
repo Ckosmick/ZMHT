@@ -1,6 +1,6 @@
-+===========+
-| Changelog |
-+===========+
+# Zero Mission Arbitrarily Compilable Community Pack
+A modular codebase for your next metroid zero mission hack.
+
 ZMHT v0.3 -- 07/14/2022
 =============
 Changes:
