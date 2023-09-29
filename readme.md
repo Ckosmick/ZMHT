@@ -61,15 +61,13 @@ Tweaks.asm
 ZMHT v0.5.1 -- 2/9/2020
 =============
 -	Initial Release
-+===============+
-| KNOWN ISSUES: |
-+===============+
+
+# KNOWN ISSUES
 	SM controls: 				Usable, not perfect. When firing upward with L + R, samus will aim at an angle for a moment. Charge beam stops working with power bombs selected.
 	Modified SM item grabbing: 	Mostly works, but music does not play in room where you reobtain suit. I haven't figured it out yet.
 	Charge beam concentration: 	Samus' palette doesn't animate when her beam is charged, it just stays glowing.
-+=========+
-| CREDITS:|
-+=========+
+
+# CREDITS
 biospark -- author of MAGE, provided lots of help putting this together. These were his contributions:
 		Customizable 4th minimap color
 		Enable Unknown Items (+ GFX / Text)
@@ -111,15 +109,13 @@ Metroid Advance Game Construction (MAGConst) -- The metconst subcommunity dedica
 Metroid Construction -- The #1 source for all things hacking metroid!
 
 Metroid: Zero Mission speedrunners -- provided lots of input on what to change in this hack.
-+=============+
-| Directions: |
-+=============+
+
+# Directions
 ◘ Put a vanilla MZM (U) rom in the extracted folder and rename it to [zm.gba].  
 ◘ Drag [zmht.asm] over armips.exe and armips should spit out a file named [output.gba].
 ◘ To disable an ASM patch, open zmht.asm in a text editor and add a semicolon (;) in front of lines of patches you do not want to have applied. Then, re-run armips. It will overwrite the previous output.gba file.
-+===========+
-| Contents: |
-+===========+
+
+# Contents
 This ASM patch is a combination of:
 		Tweaks -- Various hex tweaks. Give them a look!
 		BallSpark -- This enables initiating a morph ball shinespark, in midair.
