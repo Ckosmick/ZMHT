@@ -68,7 +68,7 @@ ZMHT v0.5.1 -- 2/9/2020
 	Charge beam concentration: 	Samus' palette doesn't animate when her beam is charged, it just stays glowing.
 
 # CREDITS
-biospark -- author of MAGE, provided lots of help putting this together. These were his contributions:
+- biospark -- author of MAGE, provided lots of help putting this together. These were his contributions:
 		Customizable 4th minimap color
 		Enable Unknown Items (+ GFX / Text)
 		Enable use of Power Bombs before Bombs
@@ -82,7 +82,7 @@ biospark -- author of MAGE, provided lots of help putting this together. These w
 		Adjustable Starting Room
 		Two-Line Text Boxes
 
-Captain Glitch -- Aside from general help with this project, his contributions include:
+- Captain Glitch -- Aside from general help with this project, his contributions include:
 		Adjustable escape timers
 		Better Morphball Rolling
 		SM style controls
@@ -93,27 +93,25 @@ Captain Glitch -- Aside from general help with this project, his contributions i
 		speedbooster in morphball
 		unlocking of Kraid's doors
 		
-Cosmic -- bullied biospark and glitch to make this a thing. Also added:
+- Cosmic -- bullied biospark and glitch to make this a thing. Also added:
 		Modified Capt. Glitch's faster item grabbing ASM to have a faster jingle (still needs work)
 		Modified biospark's unknown items ASM so that any suit can have the fully powered gfx
 		
-JumZhu.Diwa -- Walljumping with space jump tweak
+- JumZhu.Diwa -- Walljumping with space jump tweak
 
-Raygun -- Plasma beam nerf
+- Raygun -- Plasma beam nerf
 Super Metroid style projectiles
 
-Metroid_Prime_Stratton, Cosmic, Capt Glitch, raygun -- Decompiled version of Capt Glitch's Charge beam concentration ASM.
+- Metroid_Prime_Stratton, Cosmic, Capt Glitch, raygun -- Decompiled version of Capt Glitch's Charge beam concentration ASM.
 
-Metroid Advance Game Construction (MAGConst) -- The metconst subcommunity dedicated to hacking the GBATroids.
+- Metroid Advance Game Construction (MAGConst) -- The metconst subcommunity dedicated to hacking the GBATroids.
 
-Metroid Construction -- The #1 source for all things hacking metroid!
-
-Metroid: Zero Mission speedrunners -- provided lots of input on what to change in this hack.
+- Metroid Construction -- The #1 source for all things hacking metroid
 
 # Directions
-◘ Put a vanilla MZM (U) rom in the extracted folder and rename it to [zm.gba].  
-◘ Drag [zmht.asm] over armips.exe and armips should spit out a file named [output.gba].
-◘ To disable an ASM patch, open zmht.asm in a text editor and add a semicolon (;) in front of lines of patches you do not want to have applied. Then, re-run armips. It will overwrite the previous output.gba file.
+- Put a vanilla MZM (U) rom in the extracted folder and rename it to [zm.gba].  
+- Drag [zmht.asm] over armips.exe and armips should spit out a file named [output.gba].
+- To disable an ASM patch, open zmht.asm in a text editor and add a semicolon (;) in front of lines of patches you do not want to have applied. Then, re-run armips. It will overwrite the previous output.gba file.
 
 # Contents
 This ASM patch is a combination of:
