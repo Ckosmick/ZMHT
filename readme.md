@@ -9,8 +9,8 @@ A modular codebase for your next metroid zero mission hack.
 # To Add ASM To ZMHT
 - Copy the file into `ASM\`.
 - Rename the ASM to something specific. (i.e. `flashyDoors.asm`)
-- Reference it in `zmht.asm` with a .include (i.e. `.include "ASM\flashyDoors.asm"`) Keep in mind it is CaSe SeNsItIvE. For best results, create this new .include just below line 9 (`; ASM`)
-- Remove the top and bottom ends of the asm (`.open`, `.gba`, `.close`)
+- Open `zmht.asm` and reference your new file with a .include (i.e. `.include "ASM\flashyDoors.asm"`) Keep in mind it is CaSe SeNsItIvE. For best results, create this new .include just below line 9 (`; ASM`)
+- Go back to your new file and remove the top and bottom ends of the ASM (`.open`, `.gba`, `.close`)
 - Check `Options\Labels.asm`. Compare the labels (`.define blahblah, 0x0F008A4`) to the ones in your new code. if it has labels that don't already exist in Labels.asm (search by address NOT NAME), add them. If the labels already DO exist but go under a different name, rename the labels in your new asm.
 - Determine what freespace the code uses. Is it: 
 
