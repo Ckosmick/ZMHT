@@ -12,6 +12,7 @@ A modular codebase for your next metroid zero mission hack.
 - Remove the top and bottom ends of the asm (.open, .gba, .define freespace, .close)
 - Check Options\Labels.asm. Compare the labels (`.define blahblah, 0x0F008A4`) to the ones in your new code. if it has labels that don't already exist in Labels.asm (search by address NOT NAME), add them. If the labels already DO exist but go under a different name, rename the labels in your new asm.
 - Determine what freespace the code uses. Is it: 
+
 `.org 0x8043DF0 ; Unused Crocomire AI`, 
 
 `.org 0x8304054 ; Croco GFX, unused`, 
