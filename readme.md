@@ -1,24 +1,29 @@
 # Zero Mission Arbitrarily Compilable Community Pack
 A modular codebase for your next metroid zero mission hack.
 
-# Directions for use
+# Directions For Use
 - Put a vanilla MZM (U) rom in the extracted folder and rename it to [zm.gba].  
 - Drag [zmht.asm] over armips.exe and armips should spit out a file named [output.gba].
 - To disable an ASM patch, open zmht.asm in a text editor and add a semicolon (;) in front of lines of patches you do not want to have applied. Then, re-run armips. It will overwrite the previous output.gba file.
 
-# To add asm to ZMHT
-- copy the file into `ASM\`.
-- reference it in `zmht.asm` with a .include (i.e. `.include "ASM\flashyDoors.asm"` , keep in mind it is case sensitive)
-- remove the top and bottom ends of the asm (.open, .gba, .define freespace, .close)
-- check Options\Labels.asm. Compare the labels (`.define blahblah, 0x0F008A4`) to the ones in your new code. if it has labels that don't already exist in Labels.asm (search by address NOT NAME), add them. If the labels already DO exist but go under a different name, rename the labels in your new asm.
-- It probably won't work, but don't be discouraged, you did it correctly,  you may just need to resolve conflicts.
+# To Add ASM To ZMHT
+- Copy the file into `ASM\`.
+- Reference it in `zmht.asm` with a .include (i.e. `.include "ASM\flashyDoors.asm"` , keep in mind it is case sensitive)
+- Remove the top and bottom ends of the asm (.open, .gba, .define freespace, .close)
+- Check Options\Labels.asm. Compare the labels (`.define blahblah, 0x0F008A4`) to the ones in your new code. if it has labels that don't already exist in Labels.asm (search by address NOT NAME), add them. If the labels already DO exist but go under a different name, rename the labels in your new asm.
+- Determine what freespace the code uses. Is it: 
+`.org 0x8043DF0 ; Unused Crocomire AI`, 
+`.org 0x8304054 ; Croco GFX, unused`, 
+`.org endOfROM ; end of ROM` ?
 
-# If the new ASM uses freespace
-- create a label with a specific name (just text followed by a colon ex: `flashyDoorsAsm:`) at the top of the asm. We will use this later.
-- determine what freespace the code uses. is it `.org 0x8043DF0 ; Unused Crocomire AI`, `.org 0x8304054 ; Croco GFX, unused`, `.org endOfROM ; end of ROM` ?
-- rename any hijacks to have names specific to the patch, in order to prevent unnecessary conflicts. (For example, Instead of `ldr r15,=Hijack1`, use `ldr r15,=flashyDoorsHijack1`).
-- take the freespace code and stick it in a new file, save it as a new file in `FreespaceASM\`. (Make sure the filename is distinct, for that I use `F_` in front i.e. `F_flashyDoors.asm`)
-- open `Options\Freespace.asm`, look at how it's done should be pretty self explanatory. go to the right spot in the file and then use an ifdef with that definition you made before. also add a notice, makes it easier to debug knowing which patches are on or off.
+# If The New ASM Uses Freespace
+- Create a label with a specific name (just text followed by a colon ex: `flashyDoorsAsm:`) at the top of the asm. We will use this later.
+- Rename any hijacks to have names specific to the patch, in order to prevent unnecessary conflicts. (For example, Instead of `ldr r15,=Hijack1`, use `ldr r15,=flashyDoorsHijack1`).
+- Take the freespace code and stick it in a new file, save it as a new file in `FreespaceASM\`. (Make sure the filename is distinct, for that I use `F_` in front i.e. `F_flashyDoors.asm`)
+- Open `Options\Freespace.asm`, look at how it's done should be pretty self explanatory. go to the right spot in the file and then use an ifdef with that definition you made before. also add a notice, makes it easier to debug knowing which patches are on or off.
+
+# I Followed These Steps To Add ASM And It Didn't Work?
+- It probably won't work, but don't be discouraged, you did it correctly,  you may just need to resolve conflicts.
 
 # Known Issues
 TODO
