@@ -38,6 +38,10 @@ More often than not, ASM that uses End of ROM freespace will use `.org labelname
 # Known Issues / Conflicts
 Unknown Items and Starting Items (Conflict)
 
+# TODO / Help Wanted
+- Have all ASM use end of ROM freespace
+- Eliminate patch conflicts
+
 # Credits
     biospark --
 	- Customizable 4th minimap color
