@@ -17,7 +17,7 @@ A modular codebase for your next metroid zero mission hack.
 
 `.org 0x8304054 ; Croco GFX, unused`, 
 
-`.org endOfROM ; end of ROM` ?
+`.org endOfROM / .org Freespace / .org 0x8760D38 ; end of ROM` ?
 
 # If The New ASM Uses Freespace
 - Create a label with a specific name (just text followed by a colon ex: `flashyDoorsAsm:`) at the top of the asm. We will use this later.
