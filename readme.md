@@ -33,8 +33,8 @@ More often than not, ASM that uses End of ROM freespace will use `.org labelname
 # I Followed These Steps To Add ASM And It Didn't Work?
 - It probably won't work, but don't be discouraged, you did it correctly,  you may just need to resolve conflicts.
 
-# Known Issues
-TODO
+# Known Issues / Conflicts
+Unknown Items and Starting Items (Conflict)
 
 # Credits
     biospark --
