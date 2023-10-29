@@ -2,7 +2,8 @@
 A modular codebase for your next metroid zero mission hack.
 
 # Directions For Use
-- Get armips. [armips](https://github.com/Kingcom/armips/releases)
+- Download and extract ZMHT.
+- Get [armips](https://github.com/Kingcom/armips/releases) and place it in the extracted folder.
 - Put a vanilla MZM (U) rom in the extracted folder and rename it to [zm.gba].  
 - Drag [zmht.asm] over armips.exe and armips should spit out a file named [output.gba].
 - To disable an ASM patch, open zmht.asm in a text editor and add a semicolon (;) in front of lines of patches you do not want to have applied. Then, re-run armips. It will overwrite the previous output.gba file.
