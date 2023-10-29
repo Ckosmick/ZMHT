@@ -21,6 +21,8 @@ A modular codebase for your next metroid zero mission hack.
 
 More often than not, ASM that uses End of ROM freespace will use `.org labelname` referencing a label to an address at the top of the file: `.definelabel endOFROM,	0x8A00000`  
 
+- If no freespace is used, you're done. However,
+
 # If The New ASM Uses Freespace
 - Create a label with a specific name (just text followed by a colon ex: `flashyDoorsAsm:`) at the top of the asm. We will use this later.
 - Rename any hijacks to have names specific to the patch, in order to prevent unnecessary conflicts. (For example, Instead of `ldr r15,=Hijack1`, use `ldr r15,=flashyDoorsHijack1`).
