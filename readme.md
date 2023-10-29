@@ -19,7 +19,7 @@ A modular codebase for your next metroid zero mission hack.
 
 `.org 0x8760D38 ; end of ROM` ?
 
-More often than not, ASM that uses End of ROM freespace will use `.org labelname` referencing a label to an address at the top of the file: `.definelabel endOFROM,				0x8A00000`  
+More often than not, ASM that uses End of ROM freespace will use `.org labelname` referencing a label to an address at the top of the file: `.definelabel endOFROM,	0x8A00000`  
 
 # If The New ASM Uses Freespace
 - Create a label with a specific name (just text followed by a colon ex: `flashyDoorsAsm:`) at the top of the asm. We will use this later.
