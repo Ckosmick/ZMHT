@@ -9,15 +9,17 @@ A modular codebase for your next metroid zero mission hack.
 # To Add ASM To ZMHT
 - Copy the file into `ASM\`.
 - Reference it in `zmht.asm` with a .include (i.e. `.include "ASM\flashyDoors.asm"` , keep in mind it is case sensitive)
-- Remove the top and bottom ends of the asm (.open, .gba, .define freespace, .close)
-- Check Options\Labels.asm. Compare the labels (`.define blahblah, 0x0F008A4`) to the ones in your new code. if it has labels that don't already exist in Labels.asm (search by address NOT NAME), add them. If the labels already DO exist but go under a different name, rename the labels in your new asm.
+- Remove the top and bottom ends of the asm (`.open`, `.gba`, `.close`)
+- Check `Options\Labels.asm`. Compare the labels (`.define blahblah, 0x0F008A4`) to the ones in your new code. if it has labels that don't already exist in Labels.asm (search by address NOT NAME), add them. If the labels already DO exist but go under a different name, rename the labels in your new asm.
 - Determine what freespace the code uses. Is it: 
 
 `.org 0x8043DF0 ; Unused Crocomire AI`, 
 
 `.org 0x8304054 ; Croco GFX, unused`, 
 
-`.org endOfROM / .org Freespace / .org 0x8760D38 ; end of ROM` ?
+`.org 0x8760D38 ; end of ROM` ?
+
+More often than not, ASM that uses End of ROM freespace will use `.org labelname` referencing a label to an address at the top of the file: `.definelabel endOFROM,				0x8A00000`  
 
 # If The New ASM Uses Freespace
 - Create a label with a specific name (just text followed by a colon ex: `flashyDoorsAsm:`) at the top of the asm. We will use this later.
