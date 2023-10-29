@@ -41,6 +41,7 @@ Unknown Items and Starting Items (Conflict)
 # TODO / Help Wanted
 - Have all ASM use end of ROM freespace
 - Eliminate patch conflicts
+- Figure out a better name lol
 
 # Credits
     biospark --
